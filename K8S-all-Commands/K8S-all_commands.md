@@ -45,5 +45,38 @@ kubectl get nodes
     kubectl get pods
 
     # Perform the DNS query to the service created in an earlier objective.
+    kubectl exec busybox -- nslookup nginx
 
     # Record the DNS name of the service.
+    <service-name>.default.svc.cluster.local
+
+
+
+### Displaying Scheduler Events
+    # Get the information about your scheduler pod events.
+    kubectl describe pods [scheduler_pod_name] -n kube-system
+
+    # View the events in your default namespace
+    kubectl get events
+
+    # View the events in your kube-system namespace:
+    kubectl get event -n kube-system
+
+    # Watch events as they are appearing in real time
+    kubectl get events -w
+
+    # View the logs from the scheduler pod:
+    kubectl logs [kube_scheduler_pod_name] -n kube-system
+
+    # The location of a systemd service scheduler pod.
+    /var/log/kube-scheduler.log
+
+
+
+### Deploying an Application, Rolling Updates, and Rollbacks
+    # curl loop
+    while curl; http://nodeIp:port; done
+
+    # 
+
+
