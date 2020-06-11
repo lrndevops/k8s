@@ -12,7 +12,3 @@ spec:
       name: kubeserve
       labels:
         app: kubeserve
-    spec:
-      containers:
-      - image: linuxacademycontent/kubeserve:v1
-        name: app
